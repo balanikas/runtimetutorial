@@ -1,0 +1,46 @@
+﻿<Window x:Class="TestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="StringPlay" Height="435" Width="672">
+    <Grid>
+        <Button x:Name="BtnOpenTutorial" Content="Click to open tutorial" Click="OpenTutorial"
+                HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="174"
+                RenderTransformOrigin="0.587,3.955" Height="51" />
+        <TabControl x:Name="TabControl" HorizontalAlignment="Left" Height="383" Margin="249,12,0,0"
+                    VerticalAlignment="Top" Width="405">
+            <TabItem Header="Reverse">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="98*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BtnReverse" Click="BtnReverse_OnClick" Content="Reverse" HorizontalAlignment="Left"
+                            Margin="130,11,0,0" VerticalAlignment="Top" Width="75" Grid.Column="1" />
+                    <TextBox x:Name="TxtReverse" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0"
+                             TextWrapping="Wrap" Text="some text" VerticalAlignment="Top" Width="241"
+                             Grid.ColumnSpan="2" />
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Capitalize">
+                <Grid Background="#FFE5E5E5" Margin="0,2,0,-2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="BtnCapitalize" Click="BtnCapitalize_OnClick" Content="Capitalize"
+                            HorizontalAlignment="Left" Margin="276,11,0,0" VerticalAlignment="Top" Width="75"
+                            Grid.ColumnSpan="2" />
+                    <TextBox x:Name="TxtCapitalize" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0"
+                             TextWrapping="Wrap" Text="some text" VerticalAlignment="Top" Width="241"
+                             Grid.ColumnSpan="2"
+                             Grid.Column="0" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <TextBlock x:Name="TxtSample" HorizontalAlignment="Left" Margin="10,144,0,0" TextWrapping="Wrap"
+                   Text="This app exists just to show how the tutorial works with WPF" VerticalAlignment="Top"
+                   Height="132" Width="186" FontSize="18" />
+
+    </Grid>
+</Window>
